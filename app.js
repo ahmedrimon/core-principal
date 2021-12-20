@@ -1,16 +1,19 @@
-function makeUppercase(value) {
+// callback function start
+
+function handleUpperCase(value) {
   console.log(value.toUpperCase());
 }
 
-// makeUppercase("peter");
+function handleReverse(value) {
+  console.log(value.split("").reverse().join("").toUpperCase());
+}
 
-// callback function
+// callback function End
 
 function handleName(name, cb) {
-  const fullName = `${name} smith`;
+  const fullName = `${name} ahmed`;
   cb(fullName);
 }
 
-handleName("smilga");
-
-// array methods, setTimeout, event listeners etc
+handleName("Iftekhar", handleUpperCase);
+handleName("Iftekhar", handleReverse);
